@@ -2,11 +2,13 @@ jest.setTimeout(20000)
 
 const mongoose = require('mongoose')
 const supertest = require('supertest')
-const app = require('../app') // app sem .listen()
+const app = require('../app') 
 const api = supertest(app)
 
 const Blog = require('../models/blog')
 const helper = require('./test.helper')
+
+
 
 beforeEach(async () => {
   await Blog.deleteMany({})
